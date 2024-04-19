@@ -10,9 +10,12 @@ class DetailPage extends StatefulWidget {
 
 class _DetailPageState extends State<DetailPage> {
   int a = 1;
+  int price = 150;
+  int finalprice = 0;
 
   @override
   Widget build(BuildContext context) {
+    finalprice = price * a;
     return Scaffold(
       body: Container(
         margin: const EdgeInsets.all(30),
@@ -146,7 +149,7 @@ class _DetailPageState extends State<DetailPage> {
                         style: AppWidget.semiboldttextfieldstyle(),
                       ),
                       Text(
-                        "₹150",
+                        "Rs $finalprice",
                         style: AppWidget.boldtextfieldstyle(),
                       ),
                     ],
